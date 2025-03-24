@@ -11,7 +11,6 @@ const dirname = path.dirname(filename);
 app.set('views', path.join(dirname, 'views'));
 app.set("view engine", "ejs");
 app.use(express.static(path.join(__dirname, 'public')));
-app.get('/favicon.ico', (req, res) => res.status(204).end());
 
 
 const planets = (await import('npm-solarsystem')).default;
