@@ -5,17 +5,15 @@ import { fileURLToPath } from 'url';
 
 const app = express();
 
-const filename = fileURLToPath(import.meta.url);
-const dirname = path.dirname(filename);
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
-app.set('views', path.join(dirname, 'views'));
+app.set('views', path.join(__dirname, '../views'));
 app.set("view engine", "ejs");
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, '../public')));
 
 
 const planets = (await import('npm-solarsystem')).default;
-
-let home_ = 'https://pixabay.com/api/?key=5589438-47a0bca778bf23fc2e8c5bf3e&q=solar%20system&per_page=50&orientation=horizontal';
 app.get('/', async (req, res) => {
     const response = await fetch(home_);
     const data = await response.json();
@@ -88,9 +86,7 @@ app.get('/getInfo', async (req, res) => {
 });
 
 
-app.listen(3000, () => {
-    console.log('server started');
-});
+export default app;
 
 
 // this code under was for just gettign planet info and sending it to the info.ejs file
