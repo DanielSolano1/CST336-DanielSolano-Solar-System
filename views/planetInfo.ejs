@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= planetName %> - Planet Info</title>
+    <link rel="stylesheet" href="/main.css">
+</head>
+<body class="planet-info">
+    <div class="page-container">
+        <div class="content-wrap">
+            <%- include('partials/header') %>
+            <%- include('partials/navbar') %>
+
+            <h1><%= planetName %></h1>
+            <img src="<%= planet.image %>" alt="<%= planet.name %>">
+            <p><%= planet.description %></p>
+        </div>
+
+        <%- include('partials/footer') %>
+    </div>
+    
+</body>
+</html>

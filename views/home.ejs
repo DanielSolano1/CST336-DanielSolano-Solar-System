@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="stylesheet" href="/main.css">
+    <style>
+        body {
+            background-image: url("<%= home.image %>");
+        }
+    </style>
+</head>
+
+<body class="home">
+    <div class="page-container">
+      <div class="content-wrap overlay">
+          <%- include('partials/header') %>
+          <%- include('partials/navbar') %>
+  
+          <form action="/getInfo">
+              <select name="object">
+                  <option value="">Select</option>
+                  <option value="Comets">Comet</option>
+                  <option value="Meteorites">Meteorites</option>
+              </select>
+              <button class='submit'>Submit</button>
+          </form>
+      </div>
+  
+      <%- include('partials/footer') %>
+    </div>
+  </body>
+  
+
+</html>

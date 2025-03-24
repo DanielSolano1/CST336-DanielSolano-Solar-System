@@ -1,0 +1,22 @@
+<!-- filepath: /Users/danielsolano/Desktop/336_internet_programming/labs/lab6/views/asteroid.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Celestial Information</title>
+    <link rel="stylesheet" href="/main.css">
+</head>
+<body>
+    <body class="planet-info">
+        <div class="page-container">
+            <%- include('partials/header') %>
+            <%- include('partials/navbar') %>
+            <h1><%= selected %></h1>
+            <img src="<%= celestial.image %>" alt="<%= celestial.name %>">
+            <p><%= celestial.def %></p>
+        </div>
+        <%- include('partials/footer') %>
+    </div>
+</body>
+</html>

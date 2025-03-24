@@ -1,0 +1,75 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+.page-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-wrap {
+    flex: 1;
+    padding: 2rem;
+    text-align: center;
+}
+
+
+/* Home Page Specific */
+body.home {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+body.home .overlay {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+
+/* Planet Info Page */
+
+body.planet-info {
+    background-color: #000; 
+}
+
+body.planet-info img {
+    width: 50%;
+    margin: 1rem 0;
+}
+
+form select,form button {
+    padding: 0.5rem;
+    margin-top: 1rem;
+    font-size: 1rem;
+}
+
+.footer {
+    background-color: #111;
+    color: #aaa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    flex-wrap: wrap;
+    z-index: 10;
+    position: relative;
+}
+
+.footer img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+.footer .label {
+    margin-left: 1rem;
+    max-width: 500px;
+}

@@ -1,0 +1,41 @@
+<!-- <a href="/">Home</a> -->
+
+<!-- <a href="/getPlanetInfo?planet=Mars">Mars</a>
+<a href="/getPlanetInfo?planet=Mercury">Mercury</a>
+<a href="/getPlanetInfo?planet=Venus">Venus</a>
+<a href="/getPlanetInfo?planet=Saturn">Saturn</a> -->
+
+<!-- <form action = "/getPlanetInfo" >
+    <select name="planet" >
+        <option value="">Select</option>
+        <option value="Mercury">Mercury</option>
+        <option value="Venus">Venus</option>
+        <option value="Earth">Earth</option>
+        <option value="Mars">Mars</option>
+        <option value="Jupiter">Jupiter</option>
+        <option value="Saturn">Saturn</option>
+        <option value="Uranus">Uranus</option>
+        <option value="Neptune">Neptune</option>
+        <option value="nasa">Nasa</option>
+        <a href = "/nasa"> Nasa's media of the day </a>
+     </select>
+    <button class = 'submit'>Submit</button>
+</form> --> 
+
+<form action="/getInfo" method="get">
+    <!-- <label for="object">C</label> -->
+    <select name="object" id="object">
+        <option value="">Select</option>
+        <option value="Home">Home</option>
+        <option value="Mercury">Mercury</option>
+        <option value="Venus">Venus</option>
+        <option value="Earth">Earth</option>
+        <option value="Mars">Mars</option>
+        <option value="Jupiter">Jupiter</option>
+        <option value="Saturn">Saturn</option>
+        <option value="Uranus">Uranus</option>
+        <option value="Neptune">Neptune</option>
+        <option value="NASA">NASA</option> <!-- Added NASA as an option -->
+    </select>
+    <button type="submit">Go</button>
+</form>
