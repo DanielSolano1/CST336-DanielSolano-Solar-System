@@ -1,11 +1,16 @@
 import express from 'express';
-import axios from 'axios';
 import fetch from 'node-fetch';
+import path from 'path';
+import { fileURLToPath } from 'url';
 
 const app = express();
 
+const filename = fileURLToPath(import.meta.url);
+const dirname = path.dirname(filename);
+
+app.set('views', path.join(dirname, 'views'));
 app.set("view engine", "ejs");
-app.use(express.static("public"));
+app.use(express.static(path.join(__dirname, 'public')));
 app.get('/favicon.ico', (req, res) => res.status(204).end());
 
 
