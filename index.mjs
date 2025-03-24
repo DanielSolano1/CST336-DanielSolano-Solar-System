@@ -12,10 +12,9 @@ app.set('views', path.join(__dirname, '../views'));
 app.set("view engine", "ejs");
 app.use(express.static(path.join(__dirname, '../public')));
 
-
 const planets = (await import('npm-solarsystem')).default;
 app.get('/', async (req, res) => {
-    const response = await fetch(home_);
+    const response = await fetch('https://pixabay.com/api/?key=5589438-47a0bca778bf23fc2e8c5bf3e&q=solar%20system&per_page=50&orientation=horizontal');
     const data = await response.json();
     let random_index = Math.floor(Math.random() * data.hits.length);
     res.render('home', {
@@ -30,9 +29,6 @@ app.get('/getInfo', async (req, res) => {
     let selected = req.query.object;
     let planetInfo;
 
-    console.log(planets)
-    console.log(selected);
-    //console.log(planets[`get${selected}`]());
 
     if (selected === 'Home') {
         const response = await axios.get(home_);
